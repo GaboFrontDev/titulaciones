@@ -1,0 +1,21 @@
+$max-vw: 100vw;
+$max-vh: 100vh;
+$vista-previa-bg: #333333;
+$vista-previa-height: $max-vh;
+$campos-height: $max-vh;
+$vista-previa-pt: 10px;
+
+#home-container {
+  max-width: $max-vw;
+}
+#campos {
+  padding-top: $vista-previa-pt;
+  max-height: $campos-height;
+}
+
+#vista-previa {
+  background-color: $vista-previa-bg;
+  height: $vista-previa-height;
+  max-height: $vista-previa-height;
+  padding-top: $vista-previa-pt;
+}
