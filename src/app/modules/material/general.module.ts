@@ -22,11 +22,14 @@ import {
   MatTableModule,
   MatSelectModule,
   MatExpansionModule,
-  MatDividerModule
+  MatDividerModule,
+  MatDatepickerModule,
+  MatNativeDateModule
 } from "@angular/material";
 import { MaterialFileInputModule } from "ngx-material-file-input";
 import { MatDialogModule } from "@angular/material/dialog";
 import { OverlayModule } from "@angular/cdk/overlay";
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   exports: [
@@ -51,7 +54,11 @@ import { OverlayModule } from "@angular/cdk/overlay";
     OverlayModule,
     MatSelectModule,
     MatExpansionModule,
-    MaterialFileInputModule
+    MaterialFileInputModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+
   ],
   imports: [
     MatButtonModule,
@@ -76,7 +83,10 @@ import { OverlayModule } from "@angular/cdk/overlay";
     MatSelectModule,
     MatExpansionModule,
     MatDividerModule,
-    MaterialFileInputModule
+    MaterialFileInputModule,
+    ReactiveFormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ]
 })
-export class MatGeneralModule {}
+export class MatGeneralModule { }

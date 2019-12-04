@@ -4,6 +4,9 @@
       <mat-card>
         <mat-card-content>
           <h3>Campos</h3>
+          <div class="row">
+            <app-formulario (fileUpdate)="onUpdate($event)"></app-formulario>
+          </div>
         </mat-card-content>
       </mat-card>
     </div>
@@ -11,6 +14,7 @@
       <mat-card>
         <mat-card-content>
           <h3>Vista Previa</h3>
+          <app-vista-previa></app-vista-previa>
         </mat-card-content>
       </mat-card>
     </div>

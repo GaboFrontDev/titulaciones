@@ -1,0 +1,84 @@
+<form [formGroup]="formulario.documentoForm">
+  <div formGroupName="alumno">
+    <mat-form-field #nombre class="col-8">
+      <input
+        type="text"
+        matInput
+        placeholder="Nombre completo de alumno"
+        formControlName="nombre"
+      />
+    </mat-form-field>
+
+    <mat-form-field #carrera class="col-4">
+      <input
+        type="text"
+        matInput
+        placeholder="Carrera"
+        formControlName="carrera"
+      />
+    </mat-form-field>
+
+    <mat-form-field #titulo class="col-8">
+      <input
+        type="text"
+        matInput
+        placeholder="Titulo por obtener"
+        formControlName="titulo"
+      />
+    </mat-form-field>
+  </div>
+
+  <mat-form-field #modalidad class="col-6">
+    <input
+      type="text"
+      matInput
+      placeholder="Modalidad"
+      formControlName="modalidad"
+    />
+  </mat-form-field>
+
+  <mat-form-field #trabajo class="col-6">
+    <input
+      type="text"
+      matInput
+      placeholder="Trabajo realizado"
+      formControlName="trabajo"
+    />
+  </mat-form-field>
+
+  <mat-form-field #opcion class="col-6">
+    <input type="text" matInput placeholder="Opción" formControlName="opcion" />
+  </mat-form-field>
+
+  <mat-form-field #profesores class="col-6">
+    <mat-label>Profesores a seleccionar</mat-label>
+    <mat-select formControlName="profesores" multiple>
+      <mat-option
+        [value]="profesor"
+        *ngFor="let profesor of formulario.profesores"
+      >
+        {{ profesor.nombre }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field #fecha class="col-4">
+    <input
+      matInput
+      [matDatepicker]="picker"
+      placeholder="Fecha"
+      formControlName="fecha"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field #calificacion class="col-4">
+    <input
+      type="text"
+      matInput
+      placeholder="Calificación"
+      formControlName="calificacion"
+    />
+  </mat-form-field>
+</form>
