@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 import formulario from '../../classes/formulario';
 import documento from '../../interfaces/documento.interface';
 @Component({
@@ -11,7 +11,6 @@ export class FormularioComponent implements OnInit {
   constructor() { }
   formulario = new formulario();
   ngOnInit() {
-    this.formulario.documentoForm.statusChanges.subscribe(() => this.fileUpdate.emit(this.formulario.documentoForm.value))
   }
 
 }
