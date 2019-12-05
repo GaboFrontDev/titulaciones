@@ -24,7 +24,8 @@ import {
   MatExpansionModule,
   MatDividerModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
+  MatSnackBarModule
 } from "@angular/material";
 import { MaterialFileInputModule } from "ngx-material-file-input";
 import { MatDialogModule } from "@angular/material/dialog";
@@ -57,7 +58,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialFileInputModule,
     ReactiveFormsModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSnackBarModule
 
   ],
   imports: [
@@ -86,7 +88,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MaterialFileInputModule,
     ReactiveFormsModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatSnackBarModule
   ]
 })
 export class MatGeneralModule { }

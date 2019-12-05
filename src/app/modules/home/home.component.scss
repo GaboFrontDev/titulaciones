@@ -18,4 +18,8 @@ $vista-previa-pt: 10px;
   height: $vista-previa-height;
   max-height: $vista-previa-height;
   padding-top: $vista-previa-pt;
+  .content {
+    max-height: 100vh;
+    overflow: auto;
+  }
 }

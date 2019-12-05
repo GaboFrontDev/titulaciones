@@ -1,6 +1,6 @@
 <div class="bootstrap-wrapper">
   <div id="home-container" class="row no-m">
-    <div id="campos" class="col-5">
+    <div id="campos" class="col-3">
       <mat-card>
         <mat-card-content>
           <h3>Campos</h3>
@@ -8,13 +8,19 @@
             <app-formulario (fileUpdate)="onUpdate($event)"></app-formulario>
           </div>
         </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [disabled]="isDisabled" (click)="descargarPDF()">
+            Descargar
+          </button>
+        </mat-card-actions>
       </mat-card>
     </div>
-    <div id="vista-previa" class="col-7">
-      <mat-card>
+    <div id="vista-previa" class="col-9">
+      <mat-card class="content">
         <mat-card-content>
-          <h3>Vista Previa</h3>
-          <app-vista-previa></app-vista-previa>
+          <div #contenidoPDF>
+            <app-vista-previa [documento]="documento"></app-vista-previa>
+          </div>
         </mat-card-content>
       </mat-card>
     </div>

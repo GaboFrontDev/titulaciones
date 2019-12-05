@@ -11,6 +11,9 @@ export class FormularioComponent implements OnInit {
   constructor() { }
   formulario = new formulario();
   ngOnInit() {
+    this.formulario.documentoForm.valueChanges.subscribe((val: documento) => {
+      this.fileUpdate.emit(val)
+    })
   }
 
 }
