@@ -1,14 +1,45 @@
 <div class="container legal">
-  <h2 class="text-right">UNIVERSIDAD DE GUADALAJARA</h2>
-  <div class="row full-h">
-    <div class="col-4 ">
-      hola 1hola 1hola 1hola 1hola 1hola 1hola 1hola 1hola 1
-    </div>
+  <div class="row full-h" style="padding-top: 60px;">
+    <div class="col-4 "></div>
     <div class="col-8" style="text-align: justify;white-space: pre-line;">
       <p #texto>
-        <span>
-          <mark>
-            {{ cuerpo }}
+        <span *ngIf="hasBody">
+          <mark #contenido>
+            En la ciudad de Guadalajara, en la fecha
+            <b>{{ dia }} ({{ NumeroALetra(dia) }})</b> del mes de
+            <b>{{ fechas.mes[mes] }}</b> de <b>{{ anio }}</b> se reunieron en el
+            {{ CU }} los C. Profesores {{ "\n" }}
+            {{ "\n" }}
+            <b>{{ PROFESORES }}</b>
+            {{ "\n" }}
+            Miembros del Jurado designados por el Comité de Titulación de la
+            Lienciatura en <b>{{ documento.alumno.carrera }}</b> quienes
+            realizaron la Ceremonia de Titulación de la Pasante:
+            <b>{{ documento.alumno.nombre }}</b> quien para obtener el Título de
+            <b>{{ documento.alumno.titulo }}</b> cubrió los requisitos del
+            Reglamento General de Titulación de acuerdo al artículo <b>14</b>,
+            fracción <b>III</b> y los numerales artículo <b>13</b>, fracción
+            <b>III</b>, del reglamento Reglamento de titulación de este Centro
+            se presentó bajo la modalidad de:
+            <b>{{ documento.modalidad }}</b> opción
+            <b>{{ documento.opcion }}</b>
+            {{ "\n" }}
+            {{ "\n" }}
+            se realizó la evaluación al sustentante con el trabajo
+            <b>"{{ documento.trabajo }}"</b>
+            contestando satisfactoriamente las interrogantes formuladas por el
+            jurado, el cual posteriormente procedió a la deliberación
+            {{ "\n" }}
+            {{ "\n" }}
+            en la que se consideró aprobada con la calificación
+            <b>
+              {{ documento.calificacion }} ({{
+                NumeroALetra(documento.calificacion)
+              }}) </b
+            >. Finalmente, el <b>PRESIDENTE DEL JURADO</b> tomó a la sustentante
+            la protesta de ley, a la cuál contestó <b>"SI PROTESTO"</b>. Con lo
+            anterior, se dio por terminada la ceremonia, firmando el acta
+            quienes en ella intervinieron
           </mark>
         </span>
       </p>

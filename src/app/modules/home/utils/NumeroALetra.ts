@@ -28,7 +28,7 @@
 function Unidades(num) {
   switch (num) {
     case 1:
-      return "UN";
+      return "UNO";
     case 2:
       return "DOS";
     case 3:
