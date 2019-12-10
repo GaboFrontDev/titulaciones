@@ -12,10 +12,12 @@ export function wrapWords(message: string): any[] {
                     let idx = str.indexOf(",");
                     return idx != -1 && idx != 0 && idx != str.length - 1;
                 });
-            if (arr.length)
+            if (arr.length && row.join(" ").length > 50)
                 wordsByRow[idx + 1][0] = row[row.length - 1] + wordsByRow[idx + 1][0];
             row[row.length - 1] = "";
         }
+        console.log(wordsByRow);
+
     });
     return wordsByRow.map((row: any) => (row.join(" ")));
 }

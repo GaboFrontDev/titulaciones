@@ -37,10 +37,10 @@ export default class formulario {
         })
 
         this.profesores = [
-            { nombre: "Profesor Profesor1\n", id: 1, imagen_firma: "" },
-            { nombre: "Profesor Profesor2\n", id: 2, imagen_firma: "" },
-            { nombre: "Profesor Profesor3\n", id: 3, imagen_firma: "" },
-            { nombre: "Profesor Profesor4\n", id: 4, imagen_firma: "" },
+            { nombre: "Profesor Profesor1", id: 1, imagen_firma: "" },
+            { nombre: "Profesor Profesor2", id: 2, imagen_firma: "" },
+            { nombre: "Profesor Profesor3", id: 3, imagen_firma: "" },
+            { nombre: "Profesor Profesor4", id: 4, imagen_firma: "" },
         ]
     }
 
